@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - AGBODEKA Edem Wisdom</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0d9f6b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+  <h1 class="logo">StrawHart</h1>
+  <nav id="nav-links">
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#skills">Compétences</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="burger" id="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+
+
+  <!-- ===== Section Accueil + À propos ===== -->
+  <section id="about" class="hero fade-in">
+  <div class="hero-content">
+    <div class="profile-photo">
+      <img src="full React.webp" alt="AGBODEKA Edem Wisdom">
+    </div>
+    <h2>AGBODEKA Edem Wisdom</h2>
+    <h3>Développeur Web Junior</h3>
+    <p>Je crée des expériences web modernes, simples et élégantes.</p>
+    <a href="#projects" class="btn">Voir mes projets</a>
+  </div>
+</section>
+
+
+  <!-- ===== Section Compétences ===== -->
+  <section id="skills" class="skills fade-in">
+    <h2>Compétences</h2>
+    <div class="skills-grid">
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Figma</div>
+    </div>
+  </section>
+
+  <!-- ===== Section Projets ===== -->
+  <section id="projects" class="projects fade-in">
+    <h2>Projets</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Voyage Paradisiaque</h3>
+        <p>Site vitrine responsive pour une agence de voyage incluant un quiz interactif.</p>
+        <a href="https://voyageparadisiaque.netlify.app/" target="_blank" class="btn">Voir le projet</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Prononce</h3>
+        <p>PWA bilingue (Fr/En) avec lecture vocale automatique via l’API Web Speech.</p>
+        <a href="https://prononciateur.netlify.app/" target="_blank" class="btn">Voir le projet</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Straw Translate</h3>
+        <p>Application web multilingue propulsée par l’API MyMemory, inspirée de Google Translate.</p>
+        <a href="https://shtranslate.netlify.app/" target="_blank" class="btn">Voir le projet</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Todo App</h3>
+        <p>Gestionnaire de tâches moderne, simple et réactif.</p>
+        <a href="https://straw-todo.netlify.app/" target="_blank" class="btn">Voir le projet</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Section Contact ===== -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+
+    <div class="socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="copyright">© 2025 StrawHart. Tous droits réservés.</p>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  burger.classList.toggle('toggle');
+});
+</script>
+
+
+</body>
+</html>

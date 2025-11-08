@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  color: #00C896;
+}
+
+.navbar nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #00C896;
+}
+
+/* ===== Hero ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+   padding-top: 80px;
+}
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.hero-content h3 {
+  color: #00C896;
+  font-weight: 500;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.profile-photo {
+  width: 150px;       /* taille fixe pour desktop */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem auto; /* centré + espacement */
+  border: 4px solid #00C896; /* bordure verte */
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* adapte l'image au cadre circulaire */
+}
+
+
+.btn {
+  background: #00C896;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Skills ===== */
+.skills {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.skill {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.skill:hover {
+  background: #00C896;
+  color: #fff;
+}
+
+/* ===== Projects ===== */
+.projects {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-card {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* empile verticalement */
+  justify-content: space-between;
+}
+
+.project-card p {
+  margin-bottom: 1.5rem; /* espace entre description et bouton */
+}
+
+.project-card .btn {
+  align-self: flex-start; /* bouton au début */
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #00C896;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Contact ===== */
+.contact {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.contact-form .btn {
+  width: fit-content;
+  margin: 1rem auto 0;
+}
+
+.socials {
+  margin-top: 2rem;
+}
+
+.socials a {
+  color: #00C896;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #333;
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #00C896;
+  transition: all 0.3s ease;
+}
+
+.burger.toggle div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+
+/* Navbar et burger menu */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+
+    .hero {
+    padding-top: 120px; /* plus d'espace sur mobile si la navbar est plus grande */
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    display: flex;
+    flex-direction: column; /* obligatoire */
+    gap: 1rem;              /* espace entre les liens */
+    background: rgba(255,255,255,0.95);
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .navbar nav.active {
+    right: 20px;
+  }
+
+  .navbar nav a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+}
+
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* Très petit écran */
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  .hero-content h3 {
+    font-size: 1.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+/* Medium screen ajustements */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
