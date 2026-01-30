@@ -67,50 +67,70 @@
       <h2>Projets</h2>
       <div class="project-grid">
         <div class="project-card">
-          <h3>Voyage Paradisiaque</h3>
-          <p>
-            Site vitrine responsive pour une agence de voyage incluant un quiz
-            interactif.
-          </p>
-          <a
-            href="https://voyageparadisiaque.netlify.app/"
-            target="_blank"
-            class="btn"
-            >Voir le projet</a
-          >
+          <div class="project-image">
+            <img src="assets/Voyage_Paradisiaque.png" alt="Aperçu Voyage Paradisiaque" />
+          </div>
+          <div class="project-content">
+            <h3>Voyage Paradisiaque</h3>
+            <p>
+              Site vitrine responsive pour une agence de voyage incluant un quiz
+              interactif.
+            </p>
+            <a
+              href="https://voyageparadisiaque.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Voir le projet</a
+            >
+          </div>
         </div>
 
         <div class="project-card">
-          <h3>Prononce</h3>
-          <p>
-            PWA bilingue (Fr/En) avec lecture vocale automatique via l’API Web
-            Speech.
-          </p>
-          <a
-            href="https://prononciateur.netlify.app/"
-            target="_blank"
-            class="btn"
-            >Voir le projet</a
-          >
+          <div class="project-image">
+            <img src="assets/Prononce.png" alt="Aperçu Prononce" />
+          </div>
+          <div class="project-content">
+            <h3>Prononce</h3>
+            <p>
+              PWA bilingue (Fr/En) avec lecture vocale automatique via l'API Web
+              Speech.
+            </p>
+            <a
+              href="https://prononciateur.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Voir le projet</a
+            >
+          </div>
         </div>
 
         <div class="project-card">
-          <h3>Straw Translate</h3>
-          <p>
-            Application web multilingue propulsée par l’API MyMemory, inspirée
-            de Google Translate.
-          </p>
-          <a href="https://shtranslate.netlify.app/" target="_blank" class="btn"
-            >Voir le projet</a
-          >
+          <div class="project-image">
+            <img src="assets/StrawTranslate.png" alt="Aperçu Straw Translate" />
+          </div>
+          <div class="project-content">
+            <h3>Straw Translate</h3>
+            <p>
+              Application web multilingue propulsée par l'API MyMemory, inspirée
+              de Google Translate.
+            </p>
+            <a href="https://shtranslate.netlify.app/" target="_blank" class="btn"
+              >Voir le projet</a
+            >
+          </div>
         </div>
 
         <div class="project-card">
-          <h3>Todo App</h3>
-          <p>Gestionnaire de tâches moderne, simple et réactif.</p>
-          <a href="https://straw-todo.netlify.app/" target="_blank" class="btn"
-            >Voir le projet</a
-          >
+          <div class="project-image">
+            <img src="assets/ToDo_App.png" alt="Aperçu Todo App" />
+          </div>
+          <div class="project-content">
+            <h3>Todo App</h3>
+            <p>Gestionnaire de tâches moderne, simple et réactif.</p>
+            <a href="https://straw-todo.netlify.app/" target="_blank" class="btn"
+              >Voir le projet</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -118,17 +138,17 @@
     <!-- ===== Section Contact ===== -->
     <section id="contact" class="contact fade-in">
       <h2>Contact</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Votre nom" required />
-        <input type="email" placeholder="Votre email" required />
-        <textarea rows="5" placeholder="Votre message" required></textarea>
+      <form class="contact-form" action="https://formspree.io/f/mpqryaqz" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
         <button type="submit" class="btn">Envoyer</button>
       </form>
 
       <div class="socials">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/VOTRE_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:votre.email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/VOTRE_PROFIL" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
       <p class="copyright">© 2025 StrawHart. Tous droits réservés.</p>
     </section>
