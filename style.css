@@ -411,8 +411,8 @@ body {
 /* Très petit écran */
 @media (max-width: 480px) {
   .profile-photo {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
 
   .hero-content h2 {
